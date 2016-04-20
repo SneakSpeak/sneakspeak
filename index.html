@@ -136,10 +136,16 @@ sails.hooks["sp-gcm"].sendToUser(receiver, sender, message);
 
 				<section>
 					<h2>5. Iot-integration</h2>
+					<p><a href="https://github.com/SneakSpeak/sp-thing">Connecting IoT device to SneakSpeak</a></p>
+					<pre><code class="bash">$ npm install git+https://github.com/SneakSpeak/sp-thing.git</code></pre>
 					<pre><code class="javascript" data-trim>
 var sneakSpeak = require('sp-thing')(
-  server, userToken, channelID, "TestThing"
+  serverURL, userToken, channelID, thingName
 );
+
+var measurement = measureSomething();
+
+sneakSpeak.send(measurement);
 					</code></pre>
 					
 				</section>
