@@ -53,20 +53,20 @@
 					<h2>Presentation contents</h2>
 					<p>
 						<ol style="white-space: nowrap;">
-							<li>Project idea and motivation</li>
-							<li>Project implementation</li>
-							<li>Android application</li>
-							<li>Sails.js backend &amp; setting up your server</li>
-							<li>Iot-integration</li>
-							<li>What we learned?</li>
-							<li>Possible future improvements</li>
+							<li><a href="#/idea"> Project idea and motivation</a></li>
+							<li><a href="#/implementation">Project implementation</a></li>
+							<li><a href="#/android">Android application</a></li>
+							<li><a href="#/backend">Sails.js backend &amp; setting up your server</a></li>
+							<li><a href="#/iot">IoT-integration</a></li>
+							<li><a href="#/learnings">What we learned?</a></li>
+							<li><a href="#/improvements">Possible future improvements</a></li>
 						</ol>
 					</p>
 
 
 				</section>
 
-				<section style="text-align: left;">
+				<section id="idea" style="text-align: left;">
 					<h2>1. Project idea and motivation</h2>
 					<p>Desire to do something with Android and/or Node.js</p>
 					<p>Started thinking how the most popular messaging applications have a closed source server, and may or may not do stuff with your data.</p>
@@ -74,7 +74,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section id="implementation">
 						<h2>2. Project implementation</h2>
 						<ul>
 							<li>Android app - native code written in Kotlin</li>
@@ -90,8 +90,9 @@
 				</section>
 				
 
+
 				<section>
-					<section style="text-align: left;">
+					<section id="android" style="text-align: left;">
 						<h2>3. Android application</h2>
 						<p>Provides ways to...</p>
 						<ul>
@@ -132,7 +133,7 @@
 					
 				</section>
 
-				<section>
+				<section id="backend">
 					<header>
 					<h2>4. Backend</h2>
 					</header>
@@ -171,7 +172,7 @@ sails.hooks["sp-gcm"].sendToUser(receiver, sender, message);
 					
 				</section>
 
-				<section>
+				<section id="iot">
 					<h2>5. Iot-integration</h2>
 					<p><a href="https://github.com/SneakSpeak/sp-thing">Connecting IoT device to SneakSpeak</a></p>
 					<pre><code class="bash">$ npm install git+https://github.com/SneakSpeak/sp-thing.git</code></pre>
@@ -189,7 +190,7 @@ sneakSpeak.send(measurement);
 
 
 
-				<section>
+				<section id="learnings">
 					<h2>6. What we learned?</h2>
 					<ul>
 						<li>Messaging applications require quite a lot of logic code</li>
@@ -201,15 +202,15 @@ sneakSpeak.send(measurement);
 						</ul>
 					</section>
 
-					<section>
-						<h2>7. Possible future improvements</h2>
-						<ul>
-							<li>More maintainable codebase</li>
-							<li>Security improvements</li>
-							<li>Better Iot-integration</li>
-							<li>Removal of GCM, adoption of e.g. websockets</li>
-						</ul>
-					</section>
+				<section id="improvements">
+					<h2>7. Possible future improvements</h2>
+					<ul>
+						<li>More maintainable codebase</li>
+						<li>Security improvements</li>
+						<li>Better Iot-integration</li>
+						<li>Removal of GCM, adoption of e.g. websockets</li>
+					</ul>
+				</section>
 
 
 
