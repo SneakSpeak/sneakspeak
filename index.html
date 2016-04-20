@@ -96,12 +96,51 @@
 				</section>
 
 				<section>
+					<header>
 					<h2>4. Backend</h2>
+					</header>
+
+					<section>
+					<h3>The Stack</h3>
+					<ul>
+						<li>Server software: Node.js</li>
+						<li>Framework: Sails.js</li>
+						<li>Database: PostgreSQL</li>
+					</ul>
+					<p>Users and channels are stored in the database.</p>
+					<p><strong>Messages are just transmitted to the client app(s). They will never be stored in the database.</strong></p>
+					</section>
+
+					<section>
+						<h3>HTTP API</h3>
+						<p>HTTP API provides endpoints for...</p>
+						<ul>
+						<li>Registering users</li> 
+						<li>Joining and creating channels</li>
+						<li>Sending chat messages</li>
+						</ul>
+						<p>API is documented in the <a href="https://github.com/SneakSpeak/sp-server#api"><code>sp-server/README.md</code> file</a>.</p>
+					</section>
+
+					<section>
+						<h3>GCM XMPP Connections</h3>
+						<pre><code class="javascript" data-trim>
+sails.hooks["sp-gcm"].sendToChannel(channel, sender, message);
+sails.hooks["sp-gcm"].sendToUser(receiver, sender, message);
+						</code></pre>
+						<p>GCM is used to transmit chat messages to client devices.</p>
+						<p>For the SneakSpeak application we <a href="https://github.com/vaaralav/node-gcm-ccs">forked</a> and modified an existing GCM XMPP library and also wrote a <a href="https://github.com/SneakSpeak/sp-server/tree/master/api/hooks/sp-gcm">custom Sails.js hook</a> for our project.</p>
+					</section>
 					
 				</section>
 
 				<section>
 					<h2>5. Iot-integration</h2>
+					<pre><code class="javascript" data-trim>
+var sneakSpeak = require('sp-thing')(
+  server, userToken, channelID, "TestThing"
+);
+					</code></pre>
 					
 				</section>
 
