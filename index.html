@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>Project SneakSpeak</title>
+	<title>Project SneakSpeak</title>
 
 		<!-- <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab"> -->
@@ -54,7 +54,7 @@
 					<p>
 						<ol style="white-space: nowrap;">
 							<li>Project idea and motivation</li>
-							<li>General architecture</li>
+							<li>Project implementation</li>
 							<li>Android app demo</li>
 							<li>Sails.js backend &amp; setting up your server</li>
 							<li>Iot-integration</li>
@@ -62,52 +62,65 @@
 							<li>Possible future improvements</li>
 						</ol>
 					</p>
-						
+
 
 				</section>
 
-				<section>
+				<section style="text-align: left;">
 					<h2>1. Project idea and motivation</h2>
-					<p class="fragment">Desire to do something on Android.</p>
-
+					<p>Desire to do something with Android and/or Node.js</p>
+					<p>Started thinking how the most popular messaging applications have a closed server, and may or may not do stuff with your data.</p>
+					<p><strong>&rarr; How about an app that lets you host your own servers?</strong></p>
 				</section>
 
 				<section>
 					<section>
-						<h2>Project implementation</h2>
-					
-					<ul>
-						<li>Android app - native code written in Kotlin</li>
-						<li>Node.js backend - written using Sails.js framework</li>
-						<li>Preliminary Iot-integration</li>
-					</ul>
-
+						<h2>2. Project implementation</h2>
+						<ul>
+							<li>Android app - native code written in Kotlin</li>
+							<li>Node.js backend - written using Sails.js framework</li>
+							<li>Preliminary Iot-integration - Node.js package</li>
+							<li>Messaging done via HTTP- and GCM-messages</li>
+						</ul>
 					</section>
 					
-					<section>
-						<h2>Messaging chart</h2>
+					<section style="padding:0">
 						<img src="chart.png">
 					</section>
-
 				</section>
 				
 
 				<section>
-					<h2>Android</h2>
+					<h2>3. Android</h2>
 					
-				
-
 				</section>
 
 				<section>
-					<h2>What we learned?</h2>
-					<p class="fragment">GCM is very unreliable</p>
-					<p class="fragment">Debugging Android can be a pain</p>
-					<p class="fragment">something something</p>
+					<h2>4. Backend</h2>
+					
 				</section>
 
 				<section>
-					<h2>Possible future improvements</h2>
+					<h2>5. Iot-integration</h2>
+					
+				</section>
+
+
+
+				<section>
+					<h2>6. What we learned?</h2>
+					<ul>
+					<li>Messaging applications require quite a lot of logic code</li>
+					<li>Reading documentations is a pain in the bottocks</li>
+					<li>Quality of NPM packages might surprise you 
+					&#128561;</li>
+					<li>GCM is very unreliable</li>
+					<li>Debugging Android can be a infuriating</li>
+				</ul>
+				</section>
+
+				<section>
+					<h2>7. Possible future improvements</h2>
 					<ul>
 						<li>More maintainable codebase</li>
 						<li>Security improvements</li>
@@ -149,16 +162,16 @@
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 
 		</script>
 
 	</body>
-</html>
+	</html>
