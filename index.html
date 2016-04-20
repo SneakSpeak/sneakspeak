@@ -169,6 +169,20 @@ sails.hooks["sp-gcm"].sendToUser(receiver, sender, message);
 						<p>GCM is used to transmit chat messages to client devices.</p>
 						<p>For the SneakSpeak application we <a href="https://github.com/vaaralav/node-gcm-ccs">forked</a> and modified an existing GCM XMPP library and also wrote a <a href="https://github.com/SneakSpeak/sp-server/tree/master/api/hooks/sp-gcm">custom Sails.js hook</a> for our project.</p>
 					</section>
+
+					<section>
+					<h3>Host your own server</h3>
+					<pre><code class="bash" data-trim>
+git clone https://github.com/SneakSpeak/sp-server.git
+cd sp-server
+npm install
+					</code></pre>
+					<p>Create a project for your server on <a href="https://console.developers.google.com">Google Developer Console</a>. Also add API key for your server.</p>
+					<p>Update Google Project Number, Server API Key and your database settings as instructed in README. Start the server:</p>
+					<pre><code class="bash" data-trim>
+npm start
+					</code></pre>
+					</section>
 					
 				</section>
 
